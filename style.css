@@ -207,7 +207,7 @@ body {
 .card {
   position: relative;
   width: 100%;
-  padding-top: 100%; /* Força proporção 1:1 */
+  padding-top: 75%; /* Força proporção 1:1 */
   cursor: pointer;
   perspective: 1000px;
   user-select: none;
