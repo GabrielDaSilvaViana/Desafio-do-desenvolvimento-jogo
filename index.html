@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jogo da Memória - HTML/CSS</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <div id="startScreen">
+    <div class="start-content">
+      <h1>Jogo da Memória<br><span>HTML & CSS Edition</span></h1>
+      <p>Insira seu nome e escolha o nível:</p>
+      
+      <input type="text" id="playerName" placeholder="Seu nome" maxlength="20">
+      
+      <div class="level-selection">
+        <label for="customSelect">Nível de Dificuldade:</label>
+        
+        <div id="customSelect" class="custom-select-trigger" data-value="facil">
+          Fácil (6 Pares)
+        </div>
+        
+        <ul id="customOptions" class="custom-options hidden">
+          <li data-value="facil" class="selected">Fácil (6 Pares)</li>
+          <li data-value="medio">Médio (10 Pares)</li>
+          <li data-value="dificil">Difícil (16 Pares)</li>
+        </ul>
+      </div>
+
+      <button id="startBtn">Começar Jogo</button>
+    </div>
+  </div>
+  
+  <div id="endGameScreen" class="hidden">
+    <div class="end-content">
+      <h2>Fim de Jogo!</h2>
+      <p id="finalMessage"></p>
+      <button id="restartBtn">Recomeçar</button>
+    </div>
+  </div>
+
+  <div class="header-game">
+    <div id="scoreboard">Pontuação: 0</div>
+    <div id="timer">Tempo: 05:00</div>
+  </div>
+
+  <div class="game-board" id="gameBoard"></div>
+
+  <audio id="matchSound" src="ponto.mp3" preload="auto"></audio>
+  <audio id="errorSound" src="errou.mp3" preload="auto"></audio>
+  <audio id="victoryMusic" src="EstagioWin.mp3" preload="auto"></audio>
+  <audio id="backgroundMusic" src="musicatema.mp3" preload="auto" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
