@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const customOptionsList = document.getElementById('customOptions');
   const customOptions = customOptionsList.querySelectorAll('li');
 
-  // Áudios (CORREÇÃO APLICADA AQUI - IDs corrigidos para corresponder ao HTML)
+  // Áudios (CORREÇÃO APLICADA: IDs agora buscam os elementos definidos no HTML)
   const matchSound = document.getElementById('matchSound'); 
   const errorSound = document.getElementById('errorSound');
   const victoryMusic = document.getElementById('victoryMusic');
